@@ -1,0 +1,116 @@
+@font-face
+{
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v7/8vIJ7ww63mVu7gt79mT7.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v7/4UaOrEtFpBISc36j.woff2) format('woff2');
+}
+
+main
+{
+    width: 100%;
+}
+
+article
+{
+    /*overflow: hidden;*/
+    border: solid 1px #000;
+    border-radius: 7px;
+}
+
+input.toggle-view-mode:not(:checked) ~ .cats article
+{
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+}
+
+input.toggle-view-mode:checked ~ .cats article
+{
+    height: 550px;
+}
+
+input.toggle-view-mode:not(:checked) ~ .cats article:hover
+{
+    box-shadow: 0 0 15px #000;
+}
+
+input.toggle-view-mode:checked ~ .cats article
+{
+    width: 70%;
+    margin: auto;
+}
+
+input.toggle-view-mode:not(:checked) ~ .cats article p.long-description,
+input.toggle-view-mode:checked ~ .cats article p.short-description
+{
+    display: none;
+}
+
+input.toggle-view-mode:checked ~ label .list
+{
+    display: none;
+}
+
+input.toggle-view-mode:not(:checked) ~ label .tiles
+{
+    display: none;
+}
+
+.nickname a,
+.nickname a:visited
+{
+    color: #000;
+}
+
+.long-description:hover,
+.short-description:hover,
+.age:hover,
+.nickname a:hover
+{
+    color: #07cb87;
+}
+
+.photo > img
+{
+    margin: auto;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border: solid 1px #000;
+}
+
+.nickname
+{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+p,
+h1,
+h2
+{
+    text-align: center;
+}
+
+h1,
+h2
+{
+    font-family: Cinzel, serif;
+}
+
+p
+{
+    font-family: Exo, sans-serif;
+}
