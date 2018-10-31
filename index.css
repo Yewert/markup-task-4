@@ -19,11 +19,11 @@ main
     width: 100%;
 }
 
-article
+.cats article
 {
-    /*overflow: hidden;*/
     border: solid 1px #000;
     border-radius: 7px;
+    padding: 10px;
 }
 
 input.toggle-view-mode:not(:checked) ~ .cats article
@@ -34,11 +34,6 @@ input.toggle-view-mode:not(:checked) ~ .cats article
     margin: 10px;
 }
 
-input.toggle-view-mode:checked ~ .cats article
-{
-    height: 550px;
-}
-
 input.toggle-view-mode:not(:checked) ~ .cats article:hover
 {
     box-shadow: 0 0 15px #000;
@@ -47,7 +42,8 @@ input.toggle-view-mode:not(:checked) ~ .cats article:hover
 input.toggle-view-mode:checked ~ .cats article
 {
     width: 70%;
-    margin: auto;
+    min-width: 250px;
+    margin: 10px auto;
 }
 
 input.toggle-view-mode:not(:checked) ~ .cats article p.long-description,
@@ -95,6 +91,10 @@ input.toggle-view-mode:not(:checked) ~ label .tiles
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+.nickname > a
+{
+    text-decoration: none;
 }
 
 p,
