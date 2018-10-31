@@ -92,6 +92,7 @@ input.toggle-view-mode:not(:checked) ~ label .tiles
     white-space: nowrap;
     overflow: hidden;
 }
+
 .nickname > a
 {
     text-decoration: none;
